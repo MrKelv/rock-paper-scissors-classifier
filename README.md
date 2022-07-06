@@ -1,2 +1,3 @@
 # full-tensorflow-rock-paper-scissors
-Build CNN Deep Learning using TensorFlow Tech, Tensorflow Datasets, TensorBoard
+1. TensorFlow Datasets
+2. TensorBoard
