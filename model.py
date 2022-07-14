@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import tensorflow as tf
+import urllib.request
+import zipfile
 from tensorflow.keras import models, layers
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
