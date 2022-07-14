@@ -29,14 +29,6 @@ test_gen = train_data.flow_from_directory(
 )
 
 
-class sup_callback(tf.keras.callbacks.Callback):
-    def on_epoch_end(self, epoch, logs={}):
-        if logs.get("accuracy") > 0.95 and logs.get("val_accuracy") > 0.95:
-            self.model.stop_training = True
-
-
-checkpoint = sup_callback()
-
 model = tf.keras.models.Sequential(
     [
         tf.keras.layers.Conv2D(
@@ -59,7 +51,7 @@ model = tf.keras.models.Sequential(
 model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
 
 history = model.fit(
-    train_gen, validation_data=test_gen, epochs=15, verbose=1, callbacks=[checkpoint]
+    train_gen, validation_data=test_gen, epochs=2, verbose=1, callbacks=[checkpoint]
 )
 
 train_evaluation = model.evaluate(train_gen, verbose=0)
