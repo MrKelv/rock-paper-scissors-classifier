@@ -1,5 +1,2 @@
 tensorflow
 matplotlib
-urllib
-zipfile
-os
