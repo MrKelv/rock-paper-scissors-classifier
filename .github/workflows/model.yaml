@@ -30,5 +30,6 @@ jobs:
           # Post reports as comments in GitHub PRs
           cat results.txt >> report.md
           
-          cml-publish test_conf_matr.png --md >> report.md
+          cml-publish loss.png --md >> report.md
+          cml-publish accuracy.png --md >> report.md
           cml send-comment report.md
