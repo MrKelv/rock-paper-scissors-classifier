@@ -67,12 +67,14 @@ validation_evaluation = model.evaluate(test_gen, verbose=0)
 
 # Output Section
 with open("results.txt", "w") as outfile:
+    lt, at = "loss : "+str(train_evaluation[0]), "accuracy : "+str(train_evaluation[1])
+    lv, av = "loss : "+str(validation_evaluation[0]), "accuracy : "+str(validation_evaluation[1])
     outfile.write("Train Evaluation")
-    outfile.write("Loss Train :",str(train_evaluation[0]))
-    outfile.write("Accuracy Train :",str(train_evaluation[1]))
-    outfile.write("Test Evaluation")
-    outfile.write("Loss Validation :",str(validation_evaluation[0]))
-    outfile.write("Accuracy Validation :",str(validation_evaluation[1]))
+    output.write(lt)
+    output.write(at)
+    outfile.write("Validation Evaluation")
+    output.write(lv)
+    output.write(av)
 
 loss, accuracy = history.history["loss"], history.history["accuracy"]
 val_loss, val_accuracy = history.history["val_loss"], history.history["val_accuracy"]
