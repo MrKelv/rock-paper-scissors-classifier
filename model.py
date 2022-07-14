@@ -59,7 +59,7 @@ model = tf.keras.models.Sequential(
 model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
 
 history = model.fit(
-    train_gen, validation_data=test_gen, epochs=15, verbose=1, callbacks=[scb]
+    train_gen, validation_data=test_gen, epochs=15, verbose=1, callbacks=[checkpoint]
 )
 
 train_evaluation = model.evaluate(train_gen, verbose=0)
