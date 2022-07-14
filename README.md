@@ -21,5 +21,6 @@ The purpose of this project is to classify whether the image is rock or paper or
 ## Needs of this project
 - Data Augmentation
 
-## Featured Notebook
-1. [Notebook](https://github.com/MrKelv/rock-paper-scissors-classifier/blob/main/rock_paper_scissors.ipynb)
+## Featured Code and Notebook
+- [Notebook](https://github.com/MrKelv/rock-paper-scissors-classifier/blob/notebook-section/rock_paper_scissors.ipynb)
+- [Python Code](https://github.com/MrKelv/rock-paper-scissors-classifier/blob/main/model.py)
